@@ -19,7 +19,7 @@ spring:
         routes[0]:
           id: inventoryservice # modulün adıdıdr.
           predicates[0]: Path=/inventoryservice/api/v1/brands/**
-          uri: lb://INVENTORYSERVICE  #Discovery Server'da, inventory service'in tutulacağı isim. lb: load balance
+          uri: lb://INVENTORY-SERVICE  #Discovery Server'da, inventory service'in tutulacağı isim. lb: load balance
           # Discovery Serverdaki INVENTORYRYSERVICE'in Path=/inventoryservice/api/v1/brands/** adresini getir anlamına gelir
         routes[1]:
           id: discoveryserver
