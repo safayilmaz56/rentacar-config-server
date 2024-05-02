@@ -17,10 +17,10 @@ spring:
     gateway:
       mvc:
         routes[0]:
-          id: inventoryservice # mod�l�n ad?d?r
+          id: inventoryservice # modulün adıdıdr.
           predicates[0]: Path=/inventoryservice/api/v1/brands/**
-          uri: lb://INVENTORY-SERVICE  #Discovery Server'da, inventory service'in tutulaca?? isim. lb: load balance
-          # Discovery Serverdaki INVENTORYRYSERVICE'in Path=/inventoryservice/api/v1/cities/** adresini �a??r anlam?na gelir
+          uri: lb://INVENTORY-SERVICE  #Discovery Server'da, inventory service'in tutulacağı isim. lb: load balance
+          # Discovery Serverdaki INVENTORYRYSERVICE'in Path=/inventoryservice/api/v1/brands/** adresini getir anlamına gelir
         routes[1]:
           id: discoveryserver
           predicates[0]: Path=/eureka/web
